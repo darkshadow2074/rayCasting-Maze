@@ -3,15 +3,27 @@
     height: 500px;
     margin: 0 auto;
     border:1px solid black;
+    text-align: center;
+    
 }
 
 * {
     padding: 0px;
-}    
-    canvas#mycanvas {
+}  
+body{
+    background-color: rgb(194, 243, 243);
+}
+
+#mycanvas {
+    display: block;
+    margin: 5rem auto;
+    height: 60vh;
+    text-align: center;
+}
+    /* canvas#mycanvas {
         position: absolute;
         z-index: 0;
-    }
+    } */
 
     canvas#objectcanvas {
         position: absolute;

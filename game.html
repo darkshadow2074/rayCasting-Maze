@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ray Cast</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header id="navigation">
+        <div class="nav-brand">
+            <p class="brand-name"> Ray Casting</p>
+        </div>
+        <div class="navbar">
+            <ul class="navs">
+                <li class="nav-items"> <a href="#">HOME</a></li>
+                <li class="nav-items"> <a href="#about">ABOUT</a></li>
+                <li class="nav-items"><a href="#algo">ALGORITHM</a></li>
+                <li class="nav-items"><a class="active" href="#game">GAME</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <canvas id="mycanvas"></canvas>
+
+    <script src="./js/utils/util.js"></script>
+    <script src="./js/utils/globalConst.js"></script>
+    <script src="./js/utils/audioLoader.js"></script>
+    <script src="./js/vector.js"></script>
+    <script src="./js/gameMenu.js"></script>
+    <script src="./js/map.js"></script>
+    <script src="./js/rayCaster.js"></script>
+    <script src="./js/light.js"></script>
+    <script src="./js/mapObject.js"></script>
+    <script src="./js/gameWorld.js"></script>
+
+    <script>
+        let gameWrapper = document.getElementById('mycanvas');
+        window.addEventListener("load", function() {
+            console.log('html');
+            game = new GameWorld(gameWrapper);
+            game.init();
+        })
+    </script>
+</body>
+</html>

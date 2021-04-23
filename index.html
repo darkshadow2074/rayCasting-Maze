@@ -2,38 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ray Cast</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    <style>
-        #mycanvas {
-            display: block;
-        }
-    </style>
+    <link rel="stylesheet" href="./components.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+
+    <title>Ray-Casting Game</title>
 </head>
 <body>
+    <header id="navigation">
+        <div class="nav-brand">
+            <p class="brand-name"> Ray Casting</p>
+        </div>
+        <div class="navbar">
+            <ul class="navs">
+                <li class="nav-items"> <a href="#" class="active">HOME</a></li>
+                <li class="nav-items"> <a href="#about">ABOUT</a></li>
+                <li class="nav-items"><a href="#algo">ALGORITHM</a></li>
+                <li class="nav-items"><a href="#game">GAME</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div id="about"class="simple-card">
+            <h1 class="sub-heading-3 main-heading">Ray Casting Algorithm</h1>
+             <p class="introduction-text">
+                Ray casting is the methodological basis for 3-D CAD/CAM solid modeling and image rendering. It is essentially the same as ray tracing for computer graphics where virtual light rays are "cast" or "traced" on their path from the focal point of a camera through each pixel in the camera sensor to determine what is visible along the ray in the 3-D scene. The term "Ray Casting" was introduced by Scott Roth while at the General Motors Research Labs from 1978-1980.
+                For more info <a style="text-decoration: none;" href="https://en.wikipedia.org/wiki/Ray_casting">click here</a>.
+             </p>
+        </div>
 
-    <canvas id="mycanvas"></canvas>
-
-    <script src="./js/utils/util.js"></script>
-    <script src="./js/utils/globalConst.js"></script>
-    <script src="./js/utils/audioLoader.js"></script>
-    <script src="./js/vector.js"></script>
-    <script src="./js/gameMenu.js"></script>
-    <script src="./js/map.js"></script>
-    <script src="./js/rayCaster.js"></script>
-    <script src="./js/light.js"></script>
-    <script src="./js/mapObject.js"></script>
-    <script src="./js/gameWorld.js"></script>
-
-    <script>
-        let gameWrapper = document.getElementById('mycanvas');
-        window.addEventListener("load", function() {
-            console.log('html');
-            game = new GameWorld(gameWrapper);
-            game.init();
-        })
-    </script>
+        <div id="algo" class="image-card">
+            <h1 class="sub-heading-3 main-heading"> Algorithm</h1>
+            <img src="./ray-casting.jpeg" alt="Ray Casting">
+            <h5 style="text-align: center;" class="name">Fig 1 Ray Casting Algorithm</h5>
+        </div>
+        <div id="game" class="image-card game-section">
+            <h1 class="sub-heading-3 main-heading"> Game</h1>
+                <button class="btn btn-lg-primary game"><a style="text-decoration: none;"href="./game.html">Let's Play</a></button>
+        </div>
+    </main>
+    <footer class="footer">
+        <p class="text">Developed with <span> &hearts; </span></p>
+    </footer>
 </body>
 </html>
